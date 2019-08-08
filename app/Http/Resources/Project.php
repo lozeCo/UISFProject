@@ -16,6 +16,7 @@ class Project extends Resource
     {
         return [
             'id' => $this->id,
+            'user_id' => $this->user_id,
             'name' => $this->name,
             'objective' => $this->objective,
             'key' => $this->key,
