@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Resources\ProjectCollection;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 /*
@@ -17,4 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/projects/{id}','ProjectController@show');
+// Route::get('/projects/{id}','Project\ProjectController@show');
+Route::get('/projects/',function() {
+    return new ProjectCollection(Project::all());
+});
