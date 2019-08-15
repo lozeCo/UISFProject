@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/projects/{id}','Project\ProjectController@show');
-Route::get('/projects/',function() {
-    return new ProjectCollection(Project::all());
-});
+Route::get('/projects/{id?}','Project\ProjectController@show');
+// Route::get('/projects/{id}',function() {
+//     return new ProjectCollection(Project::all());
+// });
