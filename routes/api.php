@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/projects/{id}','ProjectController@show');
+Route::get('/apiPagos/{use}/{password}','apiPagos@index');
