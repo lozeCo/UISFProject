@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Resources\Json\Resource;
 
-class ProjectCollection extends ResourceCollection
+class ProjectResource extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -14,6 +14,6 @@ class ProjectCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);        
+        return ["data" => array(parent::toArray($request))];
     }
 }
