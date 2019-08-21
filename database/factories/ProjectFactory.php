@@ -9,6 +9,6 @@ $factory->define(App\Models\Project::class, function (Faker $faker) {
         'user_id' => factory(App\User::class),
         'objective' => $faker->text,
         'key' => $faker->sentence($nbWords = 4, $variableNbWords = true),
-        'progress' => $faker->randomDigit
+        'progress' => $faker->numberBetween($min=0, $max=100)
     ];
 });
